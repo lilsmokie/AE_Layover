@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<!-- Will contain Topcoat original CSS href -->
+<link id="topcoat" rel="stylesheet"/>
+<!-- Topcoat overrides (Font, etc) -->
+<link id="topcoat-host" rel="stylesheet" href="css/topcoat-host.css"/>
+<!-- Actual Panel styling -->
+<link rel="stylesheet" href="css/styles.css"/>
+
+<title>AE_Layover</title>
+</head>
+
+<body>
+<div id="content" align="center" style = "width:175px;">
+    <div id="content" align="left" style = "width:175px;">
+        <label class="topcoat-checkbox">
+            <input type="checkbox" name="newfile" id="newfile" onClick="newClick()">
+            <div class="topcoat-checkbox__checkmark"></div>
+            New File
+            </label>
+        <br>
+        <label class="topcoat-checkbox">
+            <input type="checkbox" name="groups" id="groups" disabled="disabled">
+            <div class="topcoat-checkbox__checkmark"></div>
+            Preserve Group Mask
+        </label>
+        </div><br>
+<input type="button" class="topcoat-button" name="spit" id="spit" style = "width:175px;" value="Send Layer" onClick="spitClick()" /><br>
+<hr / width="175" style="height:0px;">
+    <br>
+<input type="button" class="topcoat-button" name="snap" id="snap" style = "width:175px;" value="  Snapshot  " onClick="snapClick()" /><br>
+<hr / width="175">
+    <br>
+
+<div id="content" align="center" style = "width:175px; margin-bottom: 30px;">
+    <div style="float:left; margin-left: 5px; margin-right: 30px;">
+    <label class="topcoat-radio-button">
+        <input type="radio" name="regR" id="footage" value="Footage" checked="true">
+        <div class="topcoat-radio-button__checkmark">.....</div>
+    </label>
+        <br />
+        Footage
+    </div>
+    <div style="float:left; margin-right: 30px;">
+    <label class="topcoat-radio-button ">
+        <input type="radio" name="regR" id="comp" value="Comp">
+        <div class="topcoat-radio-button__checkmark">.....</div>
+    </label>
+        <br />
+        Comp
+    </div>
+    <div style="float:left;">
+    <label class="topcoat-radio-button">
+        <input type="radio" name="regR" id="crop" value="Cropped">
+        <div class="topcoat-radio-button__checkmark">.....</div>
+    </label>
+        <br />
+        Cropped
+    </div>
+</div>
+<br />
+<input type="button" name="reg" id="reg" class="topcoat-button" style = "width:175px;" value="Standard Import" onClick="regClick()" />
+    <hr / width="175">
+    <br />
+    <br />
+    <p>push to:</p>
+    <select class="topcoat-select" id="AEversion">
+		<option value="aftereffects-18">AE CC2021</option>
+		<option value="aftereffects-17">AE CC2020</option>
+        <option value="aftereffects-13.5">AE CC2015</option>
+        <option value="aftereffects-13">AE CC2014</option>
+        <option value="aftereffects-12">AE CC</option>
+    </select>
+    <p>by lilsmokie.com</p>
+    </div>
+    
+    <script src="js/libs/CSInterface.js"></script>
+    <script src="js/libs/jquery-2.0.2.min.js"></script>
+
+    <script src="js/themeManager.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
